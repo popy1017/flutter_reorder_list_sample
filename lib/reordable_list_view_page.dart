@@ -14,10 +14,9 @@ class ReorderableListViewPage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(),
       body: ReorderableListView.builder(
-        itemBuilder: (_, index) => ListTile(
+        itemBuilder: (_, index) => ItemCard(
+          items[index],
           key: Key('$index'),
-          title: Text(items[index].name),
-          trailing: const Icon(Icons.reorder),
         ),
         itemCount: items.length,
         onReorder: (int oldIndex, int newIndex) {

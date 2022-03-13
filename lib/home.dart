@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_reorder_list_sample/reordable_list_view_page.dart';
+import 'package:flutter_reorder_list_sample/sliver_reorderable_list_page.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -18,7 +19,9 @@ class Home extends StatelessWidget {
           ),
           ListTile(
             title: const Text('SliverReorderableList'),
-            onTap: () {},
+            onTap: () {
+              _moveTo(context, const SliverReorderableListPage());
+            },
           ),
         ],
       ),
