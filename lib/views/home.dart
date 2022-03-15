@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_reorder_list_sample/reordable_list_view_page.dart';
-import 'package:flutter_reorder_list_sample/reorderable_grid_view_sample.dart';
-import 'package:flutter_reorder_list_sample/sliver_reorderable_list_page.dart';
+import 'reordable_list_view_page.dart';
+import 'reorderable_grid_view_sample.dart';
+import 'sliver_reorderable_list_page.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);

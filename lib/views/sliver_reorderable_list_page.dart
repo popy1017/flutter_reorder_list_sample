@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'item.dart';
-import 'main.dart';
+import '../item.dart';
+import '../main.dart';
 
 class SliverReorderableListPage extends ConsumerWidget {
   const SliverReorderableListPage({Key? key}) : super(key: key);

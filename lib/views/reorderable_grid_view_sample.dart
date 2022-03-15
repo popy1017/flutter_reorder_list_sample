@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reorderable_grid/reorderable_grid.dart';
 
-import 'item.dart';
-import 'main.dart';
+import '../item.dart';
+import '../main.dart';
 
 class ReorderableGridViewSample extends ConsumerWidget {
   const ReorderableGridViewSample({Key? key}) : super(key: key);

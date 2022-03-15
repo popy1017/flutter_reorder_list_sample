@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_reorder_list_sample/home.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'item.dart';
+import 'views/home.dart';
 
 final itemsProvider =
     Provider((ref) => List<Item>.generate(30, (index) => Item('Item $index')));
