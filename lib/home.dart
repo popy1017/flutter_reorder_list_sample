@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_reorder_list_sample/reordable_list_view_page.dart';
+import 'package:flutter_reorder_list_sample/reorderable_grid_view_sample.dart';
 import 'package:flutter_reorder_list_sample/sliver_reorderable_list_page.dart';
 
 class Home extends StatelessWidget {
@@ -21,6 +22,12 @@ class Home extends StatelessWidget {
             title: const Text('SliverReorderableList'),
             onTap: () {
               _moveTo(context, const SliverReorderableListPage());
+            },
+          ),
+          ListTile(
+            title: const Text('ReorderableGridViewSample'),
+            onTap: () {
+              _moveTo(context, const ReorderableGridViewSample());
             },
           ),
         ],

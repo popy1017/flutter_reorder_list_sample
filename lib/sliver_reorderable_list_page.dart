@@ -29,7 +29,7 @@ class SliverReorderableListPage extends ConsumerWidget {
             itemBuilder: (_, index) => ReorderableDelayedDragStartListener(
               index: index,
               key: Key('$index'),
-              child: ItemCard(items[index]),
+              child: ItemTile(items[index]),
             ),
             itemCount: items.length,
             onReorder: (int oldIndex, int newIndex) {
