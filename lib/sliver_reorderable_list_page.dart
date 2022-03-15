@@ -16,6 +16,16 @@ class SliverReorderableListPage extends ConsumerWidget {
         slivers: [
           const SliverAppBar(),
           SliverReorderableList(
+            // ReorderableListViewと異なり、
+            // 各要素を ReorderableDragStartListener または ReorderableDelayedDragStartListener
+            // でラップする必要がある。
+            // その影響もあり、keyを付与する対象は ReorderableDragStartListener または
+            // ReorderableDragStartListenerになるので注意。
+            //
+            // ReorderableDragStartListenerはタップで移動が開始されるが、
+            // ReorderableDelayedDragStartListenerはロングタップで移動開始となる。
+            // タップで要素の移動が始まってしまうと
+            // スクロールがしづらくなるので ReorderableDelayedDragStartListener のほうがいい
             itemBuilder: (_, index) => ReorderableDelayedDragStartListener(
               index: index,
               key: Key('$index'),
@@ -24,6 +34,9 @@ class SliverReorderableListPage extends ConsumerWidget {
             itemCount: items.length,
             onReorder: (int oldIndex, int newIndex) {
               _onReorder(items, oldIndex, newIndex);
+            },
+            proxyDecorator: (widget, _, __) {
+              return Opacity(opacity: 0.5, child: widget);
             },
           ),
         ],

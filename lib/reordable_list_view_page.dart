@@ -16,11 +16,14 @@ class ReorderableListViewPage extends ConsumerWidget {
       body: ReorderableListView.builder(
         itemBuilder: (_, index) => ItemCard(
           items[index],
-          key: Key('$index'),
+          key: Key('$index'), // 各要素にユニークなKeyをつける必要がある
         ),
         itemCount: items.length,
         onReorder: (int oldIndex, int newIndex) {
           _onReorder(items, oldIndex, newIndex);
+        },
+        proxyDecorator: (widget, _, __) {
+          return Opacity(opacity: 0.5, child: widget);
         },
       ),
     );
