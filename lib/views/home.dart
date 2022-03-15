@@ -14,25 +14,41 @@ class Home extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(
-            title: const Text('ReorderableListView'),
+            title: Text(
+              'ReorderableListView',
+              style: Theme.of(context).textTheme.headline5,
+            ),
+          ),
+          ListTile(
+            title: const Text('通常版'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () {
               _moveTo(context, const ReorderableListViewPage());
             },
           ),
           ListTile(
-            title: const Text('SliverReorderableList'),
+            title: const Text('Sliver版'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () {
               _moveTo(context, const SliverReorderableListPage());
             },
           ),
           ListTile(
-            title: const Text('ReorderableGridViewSample'),
+            title: Text(
+              'ReorderableGridView',
+              style: Theme.of(context).textTheme.headline5,
+            ),
+          ),
+          ListTile(
+            title: const Text('通常版'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () {
               _moveTo(context, const ReorderableGridViewSample());
             },
           ),
           ListTile(
-            title: const Text('SliverReorderableGridViewSample'),
+            title: const Text('Sliver版'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () {
               _moveTo(context, const SliverReorderableGridViewSample());
             },
