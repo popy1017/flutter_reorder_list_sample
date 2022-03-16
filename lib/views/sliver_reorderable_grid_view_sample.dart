@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reorderable_grid/reorderable_grid.dart';
@@ -32,7 +33,8 @@ class SliverReorderableGridViewSample extends ConsumerWidget {
             onReorder: (int oldIndex, int newIndex) =>
                 _onReorder(items, oldIndex, newIndex),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
+              crossAxisCount: kIsWeb ? 4 : 2,
+            ),
             proxyDecorator: (widget, _, __) {
               return Opacity(opacity: 0.5, child: widget);
             },
