@@ -6,8 +6,8 @@ import 'package:reorderable_grid/reorderable_grid.dart';
 import '../item.dart';
 import '../main.dart';
 
-class SliverReorderableGridViewSample extends ConsumerWidget {
-  const SliverReorderableGridViewSample({Key? key}) : super(key: key);
+class SliverReorderableGridPage extends ConsumerWidget {
+  const SliverReorderableGridPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

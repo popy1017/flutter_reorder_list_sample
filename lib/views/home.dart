@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_reorder_list_sample/views/sliver_reorderable_grid_view_sample.dart';
+import 'package:flutter_reorder_list_sample/views/sliver_reorderable_grid_page.dart';
 import 'reorderable_list_view_page.dart';
-import 'reorderable_grid_view_sample.dart';
+import 'reorderable_grid_view_page.dart';
 import 'sliver_reorderable_list_page.dart';
 
 class Home extends StatelessWidget {
@@ -43,14 +43,14 @@ class Home extends StatelessWidget {
             title: const Text('通常版'),
             trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () {
-              _moveTo(context, const ReorderableGridViewSample());
+              _moveTo(context, const ReorderableGridViewPage());
             },
           ),
           ListTile(
             title: const Text('Sliver版'),
             trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () {
-              _moveTo(context, const SliverReorderableGridViewSample());
+              _moveTo(context, const SliverReorderableGridPage());
             },
           ),
         ],
